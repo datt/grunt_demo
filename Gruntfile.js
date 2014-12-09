@@ -12,20 +12,20 @@ module.exports = function(grunt) {
                     'src/js/2_jquery.nouislider.min.js',  // This specific file
                     'src/js/3_active.js'  // This specific file
                 ],
-                dest: 'tmp/all.js'
+                dest: 'src/all.js'
             },
             css: {
                 src: [
                     'src/css/1_jquery.nouislider.css',
                     'src/css/2_style.css'
                 ],
-                dest: 'tmp/all.css'
+                dest: 'src/all.css'
             }
         },
         uglify: {
             build: {
-                src: 'tmp/all.js',
-                dest: 'src/all.min.js'
+                src: 'src/all.js',
+                dest: 'tmp/all.min.js'
             }
         },
         cssmin: {
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
               banner: '/*This is minified css file, don\'t modify this file. */'
             },
             files: {
-              'src/all.min.css': ['tmp/all.css']
+              'tmp/all.min.css': ['src/all.css']
             }
           }
         },
@@ -57,8 +57,8 @@ module.exports = function(grunt) {
                     closeTag: '<!-- end template tags -->'
                 },
                 src: [
-                    'src/all.min.js',
-                    'src/all.min.css'
+                    'src/all.js',
+                    'src/all.css'
                 ],
                 dest: 'src/source.html'
             }
