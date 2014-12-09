@@ -1,0 +1,669 @@
+*{
+	margin:0;
+	padding:0;
+	font: normal 11px/16px verdana;
+	color: #666666;
+}
+@font-face
+{
+	font-family: ChangaOne;
+	src: url(../fonts/ChangaOne-Regular.ttf);
+}
+@font-face
+{
+	font-family: Play;
+	src: url(../fonts/Play-Bold.ttf);
+}
+a{
+	text-decoration: none;
+	color: #004466;
+}
+ul{
+	list-style: none;
+}
+.container{
+	width: 940px;
+	margin: 0 auto;
+	font-size: 0px;
+	letter-spacing: 0px;
+	word-spacing: 0px;
+}
+.floatR{
+	float: right;
+}
+.floatL{
+	float: left;
+}
+.clearfix{
+	clear: both;
+}
+.header{
+	margin-bottom: 10px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
+.searchForm{
+	float: left;
+	margin: 3px 22px 2px 0;
+	width: 298px;
+}
+.searchForm input{
+	float: left;
+}
+.searchForm input[type='text']{
+	width: 285px;
+	font: normal 12px/18px verdana;
+	color: #888888;
+	padding-left: 10px;
+	height: 23px;
+	margin-right: -5px;
+	border: solid 1px #cccccc;
+}
+.searchForm input[type='submit']{
+	background: #6e6e6e url(../images/sprite.png) no-repeat center center;
+	width: 25px;
+	height: 25px;
+	border: none;
+	background-position: 1px -1px;
+	margin-left: -21px;
+}
+.socialButtons{
+	float: left;
+	margin: 5px 0;
+}
+.socialButtons li{
+	float: left;
+	margin-left: 15px;
+}
+.socialButtons a{
+	height: 20px;
+	display: block;
+}
+.socialButtons img{
+	display: inline-block;
+}
+.socialButtons a:first-child{
+	margin: 0;
+}
+.rssFeed{
+	height: 20px;
+	width: 20px;
+	background: transparent url(../images/sprite.png) no-repeat center center;
+	background-position: -3px -28px;
+}
+.fbLikes .tweetCounts{
+	width: 100px;
+}
+.dropdowns{
+	float: right;
+}
+.dropdowns .dropdown{
+	float: left;
+	border-right: solid 1px #cccccc;
+	position: relative;
+}
+.dropdowns .dropdown:first-child{
+	border-left: solid 1px #cccccc;
+}
+.dropdownToggle{
+	display: inline-block;
+	font: normal 11px/18px verdana;
+	color: #004466;
+	padding: 6px 11px;
+}
+.caret{
+	display: inline-block;
+	margin-top: 8px;
+	vertical-align: top;
+	border-top: 4px solid #004466;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	content: "";	
+}
+.dropdownMenu{
+	position: absolute;
+	top: 100%;
+	right: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 160px;
+	padding: 5px 0;
+	margin: 2px 0 0;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+}
+.dropdownMenu a{
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	color: #333333;
+}
+.dropdownMenu a:hover{
+	color: #004466;	
+	background: #fffeee;
+}
+.dropdown.active, .dropdown:hover{
+	background: #fffeee;
+}
+.dropdown.active .dropdownMenu{
+	display: block;
+}
+.logoArea{
+	margin-bottom: 10px;
+}
+.logoArea a{
+	display: block;
+	float: left;
+}
+.logoArea img{
+	display: block;
+}
+.logoContainer{
+	display: block;
+	margin: 27px 17px 27px 0;
+	float: left;
+	width: 195px;
+}
+.adBesideLogo{
+	width: 728px;
+	height: 90px;
+}
+.navBox{
+	border-radius: 5px;
+	border-radius: 4px;
+	background-color: #333;
+	box-shadow: inset 0 1px 3px #aaa;
+	border: solid 1px #000;
+	background-image: linear-gradient(to top, rgba(0,0,0,.3), rgba(68,0,0,0), rgba(0,0,0,0));
+	margin-bottom: 20px;
+}
+.navHome{
+	height: 33px;
+	width: 34px;
+	background: #fffeef url(../images/sprite.png) no-repeat center center;
+	background-position: 5px -60px;
+	display: block;
+	float: left;
+	margin: 0 20px 0 14px;
+}
+.nav{
+	float: left;
+	margin: 4px 0 3px;
+}
+.nav li{
+	float: left;
+	text-align: center;	
+	margin-left: 30px;
+}
+.nav li:first-child{
+	margin-left: 0;
+}
+.nav a{	
+	font: bold 18px/24px Play;
+	color: #ffffff;
+	text-shadow: 0 1px #222;
+	padding-right: 13px;
+	background: transparent url(../images/downArrow.png) no-repeat right 8px;
+}
+.mainContent{
+	padding-bottom: 95px;
+}
+.columnThree{
+	width: 300px;
+	margin-left: 20px;
+	float: left;
+}
+.contentsContainer{
+	margin-bottom: 30px;
+}
+.contentsContainer .columnThree:first-child{
+	margin-left: 0;
+}
+/*.columns3{
+	margin-bottom: 30px;
+}
+.columns3 div{
+	width: 260px;
+	margin-left: 20px;
+	float: left;
+}
+.columns3 div:first-child{
+	margin: 0;
+}*/
+.multipleRows{
+	width: 300px;
+}
+.multipleRows .roundedBox{
+	float: none;
+	margin: 20px 0 0;
+}
+.multipleRows .roundedBox:first-child{
+	margin-top: 0;
+}
+.roundedBox{
+	padding: 19px;
+	border-radius: 4px;
+	background-color: #fffeee;
+	box-shadow: 0 0 3px rgba(0,0,0,.1);
+	border: solid 1px #cdd;
+	min-height: 284px;
+	background-image: linear-gradient(to right bottom, #fffbcb 3%, #fffeee 27%, #fffeee 3%);
+}
+.multipleRows .roundedBox{
+	min-height: 110px;
+}
+.roundedBox h3{
+	font: bold 28px/32px ChangaOne;
+	color: #333;
+	text-shadow: 0 1px #fff;
+	padding-bottom: 10px;
+	border-bottom: solid 1px #dddccc;
+	margin-bottom: 11px;
+}
+.adBesideReviews{
+	display: block;
+	margin-bottom: 20px;
+}
+.partialRoundedBox{
+	padding: 20px;
+	position: relative;
+	background: transparent url(../images/partialBorderBox.png) no-repeat top;
+}
+.partialRoundedBox h3{
+	font: normal 24px/26px verdana;
+	color: #333333;
+	text-shadow: 0 1px #fff;
+	padding-bottom: 10px;
+	border-bottom: solid 1px #ccdddd;
+	margin-bottom: 19px;
+}
+.partialRoundedBox .review{
+	color: #004466;
+	text-shadow: -1px 0 #b8c3cb;
+	/* white-space: nowrap; */
+	margin-bottom: 4px;
+	max-height: 32px;
+	line-height: 15px;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	display: -webkit-box;
+}
+.reviews li, .newsList li{
+	border-bottom: solid 1px #eeeeee;
+	margin-top: 15px;
+}
+.reviews li:first-child{
+	margin-top: 0;
+}
+.reviews a, .newsList a{
+	display: block;
+	padding-bottom: 12px;
+	overflow: hidden;
+}
+.newsList .btmLess{
+	border-bottom: none;
+}
+.newsList a{
+	padding-bottom: 15px;
+}
+.newsList .btmLess a{
+	padding-bottom: 0;
+}
+.reviewText{
+	width: 200px;
+	float: left;
+	margin-left: 0px;
+}
+.time {
+	color: #999999;
+}
+.carContainer{
+	height: 48px;
+	width: 48px;
+	border: solid 1px #ccdddd;
+	float: left;
+	margin-right: 10px;
+}
+.carContainer:first-child{
+	margin-right: 10px;
+}
+.bottomContent .partialRoundedBox{
+	float: left;
+	width: 580px;
+	margin-right: 20px;
+	background: transparent url(../images/partialBorderBoxCol2.png) no-repeat top;
+}
+.bottomContent .partialRoundedBox h4{
+	font: bold 14px/24px verdana;
+	color: #dd1111;
+	text-shadow: 0 1px #d66161;
+	margin-bottom: 10px;
+}
+.popularCarsLinksContainer{
+	float: left;
+	width: 182px;
+	margin-left: 17px;
+}
+.bottomContent .popularCarsLinksContainer:first-child{
+	margin-left: 0;
+}
+.partialRoundedBox.btmPadLess{
+	padding-bottom: 0;
+}
+.popularCarsLinks{
+	border-top: solid 1px #eeeeee;
+}
+.popularCarsLinks li{
+	border-bottom: solid 1px #eeeeee;
+	padding: 11px 0;
+}
+.popularCarsLinks a{
+	text-shadow: -1px 0 #b8c3cb;
+}
+.bottomAd{
+	width: 300px;
+	float: left;
+}
+.bottomAd a{
+	display: block;
+}
+.footer{
+	background: #222222;
+}
+.footer .container{
+	width: 940px;
+}
+.footer .partialRoundedBox{
+	top: -45px;
+	padding: 10px 0 0;
+	background: #222222 url(../images/footerPartialBorderBox.png) no-repeat top;
+}
+.footerNavs{	
+	margin: 11px 18px 30px;
+}
+.footerMainLinks{
+	padding-bottom: 12px;
+	border-bottom: solid 1px #000;
+}
+.footerBoldLinksList{
+	float: left;
+}
+.footerBoldLinksList li{
+	margin-left: 20px;
+	float: left;
+}
+.footerBoldLinksList li:first-child{
+	margin-left: 0;
+}
+.footerBoldLinksList a{
+	font: bold 12px/14px verdana;
+	color: #888;
+}
+.footerHome{
+	height: 20px;
+	width: 20px;
+	background: transparent url(../images/sprite.png) no-repeat center center;
+	background-position: -3px -163px;
+	display: block;
+	float: left;
+	margin: 0 20px 0 0;
+}
+.socialIcons{
+	float: right;
+}
+.socialIcons li{
+	float: left;
+	margin-left: 10px;
+}
+.socialIcons li:first-child{
+	margin-left: 0;
+}
+.share{	
+	display: block;
+	height: 20px;
+	width: 20px;
+	background: transparent url(../images/sprite.png) no-repeat center;
+}
+.rssShare{
+	background-position: -3px -28px;
+}
+.facebookShare{
+	background-position: -3px -214px;
+}
+.googlePlusShare{
+	background-position: -3px -266px;
+}
+.twitterShare{
+	background-position: -2px -240px;
+}
+.youTubeShare{
+	background-position: -3px -292px;
+}
+.footerInnerList{
+	float: left;
+	width: 180px;
+	margin-right: 20px;
+}
+.footerInnerList li{
+	padding: 15px 0 14px;
+	border-bottom: solid 1px #000;
+}
+.footerInnerList a{
+	color: #999999;
+	text-shadow: 1px 0 #2e2e2e;
+}
+.footerInnerList.lastFooterInnerList{
+	width: 284px;
+	margin-right: 0;
+}
+.bottomMost{
+	margin: 0 auto;
+	text-align: center;
+	padding: 0 200px;
+}
+.copyright{
+	margin-right: 12px;
+	float: left;
+}
+.policyLinks{
+	float: left;
+}
+.policyLinks li{
+	float: left;
+	padding: 0 5px;
+	border-left: solid 2px #444444;
+	line-height: 0;
+}
+.policyLinks li:first-child{
+	padding-left: 0;
+	border-left: none;
+}
+.copyright, .policyLinks a{
+	font: normal 10px/ 10px verdana;
+	color: #444444;
+	text-shadow: 1px 0 #333333;
+}
+.askQuestionForm{
+	margin-bottom: 22px;
+}
+.askButton{
+	font: bold 12px/26px verdana;
+	color: #004466;
+	border-radius: 4px;
+	background-color: #fff;
+	border: solid 1px #bcc;
+	background-image: linear-gradient(to top, rgba(0,0,0,.05), rgba(0,0,0,0));
+	padding: 6px 9px;
+	text-align: center;
+	min-width: 260px;
+	max-width: 300px;
+	display: block;
+}
+.askQuestionForm textarea{
+	background-color: #fff;
+	box-shadow: inset 0 1px #ddd;
+	border: solid 1px #ccc;
+	padding: 10px 7px 0;
+	resize: none;
+	margin-bottom: 10px;
+	width: 244px;
+	height: 128px;
+}
+.askQuestionForm label{
+	display: block;
+	font-size: 10px;
+	color: #666666;
+	margin-bottom: 18px;
+}
+.link{
+	text-shadow: -1px 0 #b8c3cb;
+}
+.btnTextContainer{
+	width: 254px;
+	float: left;
+	text-align: left;
+	margin-right: 6px;
+}
+.btnTextContainer h4{
+	font: bold 12px/14px verdana;
+	color: #dd1111;
+	text-shadow: 1px 0 #f1b8b8;
+	margin-bottom: 5px;
+}
+.btnTextContainer span{
+	font: normal 11px/13px verdana;
+	color: #000;
+	text-shadow: 1px 0 #cacaca;
+}
+.askButton.large{
+	overflow: hidden;
+	width: 280px;
+	min-height: 36px;
+}
+.askButton.large i{
+	display: block;
+	float: left;
+	background: transparent url(../images/sprite.png) no-repeat center;
+	background-position: -5px -188px;
+	height: 20px;
+	width: 13px;
+	margin: 6px 0 0 6px;
+}
+.marginX{
+	margin-bottom: 10px;
+}
+.newCarSubHeading{
+	margin-bottom: 22px;
+}
+.goBtn{
+	font: bold 16px/24px ChangaOne;
+	background-color: #777;
+	border: solid 1px #555;
+	background-image: linear-gradient(to top, rgba(0,0,0,.25), rgba(0,0,0,0));
+	text-transform: uppercase;
+	color: #fff;
+	padding: 2px 7px;
+	float: right;
+}
+.customSelect{
+	box-shadow: inset 0 1px #ddd;
+	padding: 5px;
+	min-width: 105px;
+	color: #888;	
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	position: relative;
+	background: #ffffff url(../images/selectboxIcon.png) no-repeat right center;
+}
+.newCarForm{
+	padding-bottom: 30px;
+	border-bottom: solid 1px #dddccc;
+	margin-bottom: 25px;
+}
+.budgetHeading{
+	font-weight: bold;
+	text-shadow: 0 1px #fff;
+	color: #333;
+}
+.fieldsContainer{
+	margin-bottom: 20px;
+}
+.multipleRows p{
+	margin-bottom: 12px;
+}
+.multipleRows .customSelect{
+	width: 260px
+}
+.largeButtonsWrapper h3{
+	margin-bottom: 30px;
+}
+.multiColorBtn{
+	display: block;
+	padding: 10px;
+	text-align: center;
+	border-radius: 4px;
+	background-color: #fff;
+	border: solid 1px #abb;
+	background-image: linear-gradient(to top, rgba(0,0,0,.1), rgba(0,0,0,0));
+	font: bold 12px/18px verdana;
+	color: #004466;
+}
+.largeButtonsList li {
+	margin-top: 10px;
+}
+.largeButtonsList li:first-child{
+	margin-top: 0;
+}
+.multiColorBtn span{
+	font: bold 12px/18px verdana;
+	color: #dd1111;
+	text-shadow: 1px 0 #e69696;
+}
+.rangeMeterContainer{
+	float: left;
+	margin-left: 0;
+	width: 220px;
+	margin-top: 8px;
+	position: relative;
+}
+.rangeMeter{
+	width: 200px;
+	height: 8px;
+	border: solid 1px #ddd;
+}
+.selectedRange{
+	width: 82px;
+	height: 8px;
+	border: solid 1px #bb0000;
+	position: absolute;
+	background: red;
+	left: 43px;
+}
+.rangeHandle{
+	background: transparent url(../images/sprite.png) no-repeat center center;
+	width: 12px;
+	height: 28px;
+	background-position: -4px -127px;
+	position: absolute;
+	border: none;
+	top: -8px;
+}
+.rangeHandle.start{
+	left: 32px;
+}
+.rangeHandle.end{
+	left: 126px;
+}
+.logoArea .clearfix, .nav .clearfix, .multipleRows .clearfix, .bottomContent .clearfix, .footerMainLinks .clearfix, .footerBoldLinksList .clearfix, .policyLinks .clearfix, .askButton .clearfix{
+	float: none;
+	clear: both;
+	border: none;
+    background: none;
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+}
