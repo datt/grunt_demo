@@ -68,6 +68,12 @@ module.exports = function(grunt) {
                 src: ['src/source.html'],
                 dest: ['build/final.html']
             }
+        },
+        remove: {
+            options: {
+              trace: true
+            },
+            dirList: ['tmp']
         }
     });
 
@@ -78,7 +84,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-script-link-tags');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-inline');
+    grunt.loadNpmTasks('grunt-remove');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat','uglify','cssmin','tags','imagemin','inline']);
+    grunt.registerTask('default', ['concat','uglify','cssmin','tags','imagemin','inline','remove']);
 };
